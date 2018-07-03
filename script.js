@@ -33,15 +33,23 @@ function calculer(g,v){
         switch(oprerator){
             case '+' :
                 ecran.value= operande1*1+parseFloat(ecran.value);
+                operande1 = 0;
+
             break;
             case '-' :
                 ecran.value = operande1 - ecran.value;
+                operande1 = 0;
+
             break;
             case '/' :
                 ecran.value = operande1 / ecran.value;
+                operande1 = 0;
+
             break;
             case 'x' :
                 ecran.value = operande1 * ecran.value;
+                operande1 = 0;
+
             break;
         }
         break;
@@ -51,6 +59,7 @@ function calculer(g,v){
                 
                 case 'ce':
                     ecran.value = '0';
+                    operande1 = 0;
                 break;
                 case 'c':
                     ecran.value = ecran.value.substring(0, ecran.value.length-1);
